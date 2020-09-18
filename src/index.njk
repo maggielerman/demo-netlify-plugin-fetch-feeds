@@ -49,7 +49,7 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 
 <h2>Zazzle</h2>
 <ul class="listing">
-{%- for item in zazzle.entries.slice(0,4) -%}
+{%- for item in zazzle.rss.channel.item.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
