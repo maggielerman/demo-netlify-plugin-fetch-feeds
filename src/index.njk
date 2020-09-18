@@ -14,8 +14,13 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
   When this example site is generated, the build plugin requests (and caches for future builds) these feeds:
 </p>
 <ul>
+
   <li><a href="https://www.netlify.com/blog/index.xml?{{ site.utm }}">https://www.netlify.com/blog/index.xml</a></li>
   <li><a href="https://hawksworx.com/feed.json">https://hawksworx.com/feed.json</a></li>
+  <li><a href="https://hawksworx.com/feed.json">https://hawksworx.com/feed.json</a></li>
+  <li><a href="https://www.etsy.com/shop/snapchatfiltertoday/rss">https://www.etsy.com/shop/snapchatfiltertoday/rss</a></li>
+  <li><a href="http://feed.zazzle.com/rebeltail/rss">http://feed.zazzle.com/rebeltail/rss</a></li>
+
 </ul>
 <p>
   The data feeds and the duration of their caching can be configured in <a href="{{ pkg.repository.url }}/blob/master/netlify.toml">the netlify.toml</a> config file. Once requested, the data is available for the site generator to use as below.
@@ -35,6 +40,19 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 {%- endfor -%}
 </ul>
 
+<h2>Etsy</h2>
+<ul class="listing">
+{%- for item in etsy.entries.slice(0,4) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+<h2>Zazzle</h2>
+<ul class="listing">
+{%- for item in zazzle.entries.slice(0,4) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
 <hr />
 
 <h2>Quick try-out</h2>
