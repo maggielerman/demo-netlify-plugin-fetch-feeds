@@ -42,7 +42,7 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 
 <h2>Etsy</h2>
 <ul class="listing">
-{%- for item in etsy.entries.slice(0,4) -%}
+{%- for item in etsy.rss.channel.item.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
