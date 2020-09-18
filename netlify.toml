@@ -14,17 +14,14 @@
       name = "hawksworx"
       url = "https://hawksworx.com/feed.json"
       ttl = 120   # Cache for 2 minutes
-
     [[plugins.inputs.feeds]]
       name = "netlify"
       url = "https://www.netlify.com/blog/index.xml"
       ttl = 86400   # Cache for 24 hours
-
     [[plugins.inputs.feeds]]
       name = "etsy"
       url = "https://www.etsy.com/shop/snapchatfiltertoday/rss"
       ttl = 120   # Cache for 2 minutes
-
       [[plugins.inputs.feeds]]
       name = "zazzle"
       url = "http://feed.zazzle.com/rebeltail/rss"
